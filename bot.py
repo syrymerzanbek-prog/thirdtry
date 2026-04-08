@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import json
 import os
 
-TOKEN =("8650085467:AAGm1NId5rtZQJi21fuAMnpfwwYZzTYSuN4")
+TOKEN =("8650085467:AAEm-esCEKUaAaIjUcJwSLM1UF16eyJK2dw")
 ADMIN_ID = 5964805785
 FILE_NAME = "data.json"
 
