@@ -48,7 +48,15 @@ async def set_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Сохранено ✅")
 
 # --- запуск ---
-app = ApplicationBuilder().token(TOKEN).build()
+app = (
+    ApplicationBuilder()
+    .token(TOKEN)
+    .connect_timeout(30)
+    .read_timeout(30)
+    .write_timeout(30)
+    .pool_timeout(30)
+    .build()
+)
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("send", send_message))
